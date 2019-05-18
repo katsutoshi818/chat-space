@@ -33,6 +33,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
+- has_many :members
 - has_many :groups, through: :members
 - has_many :messages
 
@@ -43,6 +44,7 @@ Things you may want to cover:
 |group_name|string|null: false|
 
 ### Association
+- has_many :members
 - has_many :users, through: :members
 - has_many :messages
 
