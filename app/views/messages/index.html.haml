@@ -1,8 +1,10 @@
 %div.sidebar
   %div.sidebar-top
-    %p ユーザーネーム
-    = link_to root_path do
-      %i.far.fa-comment-alt
-    = link_to root_path do
-      %i.fa.fa-cog
+    %div.sidebar-top-left
+      %p ユーザーネーム
+    %div.sidebar-top-right
+      = link_to root_path do
+        %i.fa.fa-pencil-square-o.sidebar-top-right__awesome
+      = link_to root_path do
+        %i.fa.fa-cog.sidebar-top-right__awesome
   %div.sidebar_bottom
