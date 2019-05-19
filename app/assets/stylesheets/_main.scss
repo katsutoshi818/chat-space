@@ -3,9 +3,11 @@
   width: calc(100vw - 300px);
   float: right;
   .main-header{
+    height: 100px;
+    width: 100%;
     padding: 0 40px 0 40px;
+    border-bottom: solid 1px #eeeeee;
     .group-label{
-      height: 100px;
       float: left;
       &__name-label{
         font-size: 20px;
@@ -29,5 +31,7 @@
       };
     };
   };
-
+  .main-chat-space{
+    background-color: #fafafa;
+  };
 };
