@@ -6,8 +6,17 @@
     background-color: #253141;
     height: 100px;
     padding: 35px 20px 35px 20px;
-    p{
-      color: $WhiteColor;
-    }
+    .sidebar-top-left{
+      float: left;
+      p{
+        color: $WhiteColor;
+      };
+    };
+    .sidebar-top-right{
+      float: right;
+      .sidebar-top-right__awesome{
+        color: $WhiteColor;
+      };
+    };
   };
 };
