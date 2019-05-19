@@ -1,0 +1,33 @@
+.main{
+  height: 100%;
+  width: calc(100vw - 300px);
+  float: right;
+  .main-header{
+    padding: 0 40px 0 40px;
+    .group-label{
+      height: 100px;
+      float: left;
+      &__name-label{
+        font-size: 20px;
+        color: #333333;
+        margin-top: 35px;
+      };
+      &__member{
+        font-size: 12px;
+        color: $GreyColor;
+        margin-top: 15px;
+      };
+    };
+    .edit-label{
+      float: right;
+      &__edit-button{
+        color: blue;
+        line-height: 40px;
+        border: solid 1px blue;
+        padding: 0 20px;
+        margin-top: 28px;
+      };
+    };
+  };
+
+};
