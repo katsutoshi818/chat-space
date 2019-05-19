@@ -10,13 +10,29 @@
       float: left;
       p{
         color: $WhiteColor;
+        font-weight: bold;
       };
     };
     .sidebar-top-right{
       float: right;
-      .sidebar-top-right__awesome{
+      &__awesome{
         color: $WhiteColor;
       };
+    };
+  };
+  .sidebar-bottom{
+    color: $WhiteColor;
+    padding: 0 20px 0 20px;
+    &__group{
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 20px;
+    };
+    &__message{
+      font-size: 11px;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 20px;
     };
   };
 };
