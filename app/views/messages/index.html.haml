@@ -11,10 +11,17 @@
   %div.sidebar-bottom
     = link_to root_path do
       %div.group
-        %p.group__name group
-        %p.group__message message
+        %p.group__name グループ
+        %p.group__message メッセージ
     = link_to root_path do
       %div.group
-        %p.group__name group
-        %p.group__message message
+        %p.group__name グループ
+        %p.group__message メッセージ
 %div.main
+  %div.main-header
+    %div.group-label
+      %p.group-label__name-label グループ
+      %p.group-label__member Member:ああああ
+    %div.edit-label
+      = link_to root_path do
+        %div.edit-label__edit-button EDIT
