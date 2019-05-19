@@ -9,8 +9,12 @@
       = link_to root_path do
         %i.fa.fa-cog.sidebar-top-right__awesome
   %div.sidebar-bottom
-    %p.sidebar-bottom__group group
-    %p.sidebar-bottom__message message
-    %p.sidebar-bottom__group group
-    %p.sidebar-bottom__message message
+    = link_to root_path do
+      %div.group
+        %p.group__name group
+        %p.group__message message
+    = link_to root_path do
+      %div.group
+        %p.group__name group
+        %p.group__message message
 %div.main

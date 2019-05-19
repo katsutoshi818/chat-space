@@ -27,17 +27,21 @@ header{
   };
   .sidebar-bottom{
     color: $WhiteColor;
-    padding: 0 20px 0 20px;
-    &__group{
-      font-size: 15px;
-      font-weight: bold;
-      margin-top: 20px;
-    };
-    &__message{
-      font-size: 11px;
-      font-weight: bold;
-      margin-top: 5px;
+    padding: 20px 20px 0 20px;
+    .group{
       margin-bottom: 40px;
+      color: $WhiteColor;
+      &__name{
+        font-size: 15px;
+        font-weight: bold;
+      };
+      &__message{
+        font-size: 11px;
+        font-weight: bold;
+        margin-top: 5px;
+      };
     };
   };
 };
+
+
