@@ -38,5 +38,6 @@
       %p.message-box__message テスト
   %div.main-form
     %form.form-space{action: "", method: :get}
-      %textarea.form-space__message{name: "message", value: "type a message"}
+      %div.form-space-message-area
+        %textarea.form-space-message-area__message{name: "message", value: "type a message"}
       %input.form-space__button{type: :submit, value: "Send"}
