@@ -60,7 +60,6 @@
     .form-space{
       height: 50px;
       width: 100%;
-      position: relative;
       .form-space-message-area{
         background-color: white;
         height: 50px;
@@ -68,10 +67,23 @@
         padding: 0 40px 0 10px;
         margin: 0;
         float: left;
+        position: relative;
         &__message{
           height: 50px;
           width: 100%;
+          font-size: 16px;
+          color: $BlackColor;
           border-style: none;
+          resize: none;
+        };
+        &__image{
+          position: absolute;
+          top: 15px;
+          right: 10px;
+          z-index: 1;
+          &__awesome{
+            color: black;
+          }
         };
       };
       &__button{
@@ -80,9 +92,6 @@
         background-color: $BlueColor;
         color: $WhiteColor;
         padding: 0px 15px;
-        display: inline-block;
-        position: absolute;
-        right: 0;
         float: right;
       };
     };
