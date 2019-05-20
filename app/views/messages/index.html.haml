@@ -37,3 +37,6 @@
         %span 2019/05/19(Sun) 15:11:36
       %p.message-box__message テスト
   %div.main-form
+    %form.form-space{action: root_path, method: :post}
+      %textara.form-space__message{name: "message", value: "type a message"}
+      %imput.form-space__button{type: :submit, value: "SEND"}
