@@ -56,15 +56,23 @@
   .main-form{
     height: 90px;
     background-color: grey;
-    padding: 0 40px;
+    padding: 20px 40px;
     .form-space{
       height: 50px;
       width: 100%;
+      position: relative;
       &__message{
-
+        height: 50px;
+        width: calc(100% - 105px);
       };
       &__button{
-
+        height: 50px;
+        width: 90px;
+        background-color: $BlueColor;
+        color: $WhiteColor;
+        padding: 0px 15px;
+        position: absolute;
+        right: 0;
       };
     };
   };
