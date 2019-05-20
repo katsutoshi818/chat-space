@@ -1,0 +1,44 @@
+.sidebar{
+  background-color: #2f3e51;
+  height: 100%;
+  width: 300px;
+  float: left;
+  .sidebar-top{
+    background-color: #253141;
+    height: 100px;
+    padding: 35px 20px 35px 20px;
+    .sidebar-top-left{
+      float: left;
+      p{
+        color: $WhiteColor;
+        font-size: 16px;
+        font-weight: bold;
+      };
+    };
+    .sidebar-top-right{
+      float: right;
+      &__awesome{
+        color: $WhiteColor;
+      };
+    };
+  };
+  .sidebar-bottom{
+    color: $WhiteColor;
+    padding: 20px 20px 0 20px;
+    .group{
+      margin-bottom: 40px;
+      color: $WhiteColor;
+      &__name{
+        font-size: 15px;
+        font-weight: bold;
+      };
+      &__message{
+        font-size: 11px;
+        font-weight: bold;
+        margin-top: 5px;
+      };
+    };
+  };
+};
+
+
