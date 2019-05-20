@@ -40,7 +40,7 @@
     %form.form-space{action: "", method: :get}
       %div.form-space-message-area
         %input.form-space-message-area__message{name: "message", type: "text",  placeholder: "type a message"}
-        %label.form-space-message-area__image
-          = link_to root_path do
-            %i.fa.fa-picture-o.form-space-message-area__image__awesome
+        %label.form-space-message-area__image{for: "get-image"}
+          %i.fa.fa-picture-o.form-space-message-area__image__awesome
+        %input#get-image{type: "file"}
       %input.form-space__button{type: :submit, value: "Send"}
