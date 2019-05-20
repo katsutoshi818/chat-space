@@ -61,6 +61,12 @@
       height: 50px;
       width: 100%;
       position: relative;
+      .form-space-message-area{
+        &__message{
+          height: 50px;
+          width: calc(100% - 105px);
+        };
+      };
       &__message{
         height: 50px;
         width: calc(100% - 105px);
