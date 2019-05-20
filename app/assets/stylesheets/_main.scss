@@ -62,14 +62,17 @@
       width: 100%;
       position: relative;
       .form-space-message-area{
-        &__message{
-          height: 50px;
-          width: calc(100% - 105px);
-        };
-      };
-      &__message{
+        background-color: white;
         height: 50px;
         width: calc(100% - 105px);
+        padding: 0 40px 0 10px;
+        margin: 0;
+        float: left;
+        &__message{
+          height: 50px;
+          width: 100%;
+          border-style: none;
+        };
       };
       &__button{
         height: 50px;
@@ -77,8 +80,10 @@
         background-color: $BlueColor;
         color: $WhiteColor;
         padding: 0px 15px;
+        display: inline-block;
         position: absolute;
         right: 0;
+        float: right;
       };
     };
   };
