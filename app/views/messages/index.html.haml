@@ -11,11 +11,10 @@
   %div.main-chat-space
     = render "message-box"
   %div.main-form
-    %form.form-space{action: "", method: :get}
+    = form_for [@group, @message], html: {class: "form-space" } do |f|
       %div.form-space-message-area
-        %input.form-space-message-area__message{name: "message", type: "text",  placeholder: "type a message"}
-        %label.form-space-message-area__image{for: "get-image"}
+        = f.text_field :content, class: "form-space-message-area__message",  placeholder: "type a message"
+        = f.label :image, class: "form-space-message-area__image", for: "get-image" do
           %i.fa.fa-picture-o.form-space-message-area__image__awesome
-        %input#get-image{type: "file"}
-      %input.form-space__button{type: :submit, value: "Send"}
-      
+          = f.file_field :image, id: "get-image"
+      = f.submit class: "form-space__button", value: "Send"
