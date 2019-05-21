@@ -9,4 +9,8 @@
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog.sidebar-top-right__awesome
   %div.sidebar-bottom
-    = render "group", group: @groups
+    - current_user.groups.each do |gro|
+      = link_to group_messages_path(gro) do
+        %div.group
+          %p.group__name #{gro.name}
+          %p.group__message メッセージ
