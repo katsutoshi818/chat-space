@@ -6,7 +6,7 @@
       %p.group-label__name-label グループ
       %p.group-label__member Member:ああああ
     %div.edit-label
-      = link_to root_path do
+      = link_to "/groups/#{params[:group_id]}/edit" do
         %div.edit-label__edit-button EDIT
   %div.main-chat-space
     = render "message-box"
