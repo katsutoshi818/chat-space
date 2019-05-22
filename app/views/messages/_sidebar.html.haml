@@ -13,4 +13,5 @@
       = link_to group_messages_path(gro) do
         %div.group
           %p.group__name #{gro.name}
-          %p.group__message メッセージ
+          %p.group__message 
+            = gro.show_last_message
