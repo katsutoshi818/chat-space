@@ -9,7 +9,7 @@
       = link_to "/groups/#{params[:group_id]}/edit" do
         %div.edit-label__edit-button EDIT
   %div.main-chat-space
-    = render "message-box"
+    = render @messages
   %div.main-form
     = form_for [@group, @message], html: {class: "form-space" } do |f|
       %div.form-space-message-area
