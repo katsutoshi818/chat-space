@@ -17,7 +17,7 @@ $(function(){
     var url = $(this).attr('action')
     $.ajax({
       url: url,
-      type: "post",
+      type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
@@ -25,8 +25,8 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('..main-chat-space').append(html)
-      $('.textbox').val('form-space-message-area__message')
+      $('.main-chat-space').append(html)
+      $('.form-space-message-area__message').val('')
     })
   })
 });
