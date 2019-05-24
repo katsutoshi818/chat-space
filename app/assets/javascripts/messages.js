@@ -46,6 +46,7 @@ $(function(){
       $('.main-chat-space').append(html)
       $('.form-space-message-area__message').val('')
       $('.main-chat-space').scrollTop($('.main-chat-space')[0].scrollHeight); 
+      $(".form-space__button").prop("disabled", false);
     })
     .fail(function(){
       alert('error');
