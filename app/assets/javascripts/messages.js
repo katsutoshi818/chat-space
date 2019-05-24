@@ -1,18 +1,32 @@
 $(function(){
   function buildHTML(message){
-    var image = message.image
-    var html = `<div class="message-box">
-                  <p class="message-box__user-name"> 
-                    ${message.user_name}
-                    <span>
-                      ${message.create_time}
-                    </span>
-                  </p>
-                    <p calss="message-box__message"> 
-                      ${message.content}
+    var image = message.image 
+    if (image){
+      var html = `<div class="message-box">
+                    <p class="message-box__user-name"> 
+                      ${message.user_name}
+                      <span>
+                        ${message.create_time}
+                      </span>
                     </p>
-                  <img src=${message.image} > 
-                </div>`
+                      <p calss="message-box__message"> 
+                        ${message.content}
+                      </p>
+                    <img src=${message.image} > 
+                  </div>`
+    }else{
+      var html = `<div class="message-box">
+                    <p class="message-box__user-name"> 
+                      ${message.user_name}
+                      <span>
+                        ${message.create_time}
+                      </span>
+                    </p>
+                      <p calss="message-box__message"> 
+                        ${message.content}
+                      </p>
+                  </div>`
+    }
     return html;
   }
   $('.form-space').on('submit', function(e){
@@ -31,7 +45,7 @@ $(function(){
       var html = buildHTML(data);
       $('.main-chat-space').append(html)
       $('.form-space-message-area__message').val('')
-      // $('.main-chat-space').animate({scrollBottom: 0}, 10, 'swing');
+      $('.main-chat-space').scrollTop($('.main-chat-space')[0].scrollHeight); 
     })
     .fail(function(){
       alert('error');
