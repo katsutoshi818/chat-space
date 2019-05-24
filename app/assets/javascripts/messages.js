@@ -1,32 +1,20 @@
 $(function(){
   function buildHTML(message){
-    var image = message.image 
-    if (image){
-      var html = `<div class="message-box">
-                    <p class="message-box__user-name"> 
-                      ${message.user_name}
-                      <span>
-                        ${message.create_time}
-                      </span>
+    var img = message.image 
+      ? ` <img src=${message.image} > `
+      : "";
+    var html = `<div class="message-box">
+                  <p class="message-box__user-name"> 
+                    ${message.user_name}
+                    <span>
+                      ${message.create_time}
+                    </span>
+                  </p>
+                    <p calss="message-box__message"> 
+                      ${message.content}
                     </p>
-                      <p calss="message-box__message"> 
-                        ${message.content}
-                      </p>
-                    <img src=${message.image} > 
-                  </div>`
-    }else{
-      var html = `<div class="message-box">
-                    <p class="message-box__user-name"> 
-                      ${message.user_name}
-                      <span>
-                        ${message.create_time}
-                      </span>
-                    </p>
-                      <p calss="message-box__message"> 
-                        ${message.content}
-                      </p>
-                  </div>`
-    }
+                  ${img}
+                </div>`
     return html;
   }
   $('.form-space').on('submit', function(e){
@@ -51,8 +39,8 @@ $(function(){
     })
     .fail(function(){
       $('.form-space__button').val('Send')
-      alert('error');
       $(".form-space__button").prop("disabled", false);
+      alert('error');
     })
   })
 });
