@@ -35,6 +35,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 46px 40px 0 40px;
+    overflow: scroll;
     .message-box{
       margin-bottom: 40px;
       &__user-name{
