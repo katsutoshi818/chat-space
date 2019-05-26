@@ -3,8 +3,11 @@
 %div.main
   %div.main-header
     %div.group-label
-      %p.group-label__name-label グループ
-      %p.group-label__member Member:ああああ
+      %p.group-label__name-label 
+        = @group.name
+      %p.group-label__member 
+        - @group.users.each do |user|
+          = "#{user.name}"
     %div.edit-label
       = link_to "/groups/#{params[:group_id]}/edit" do
         %div.edit-label__edit-button EDIT
