@@ -3,7 +3,7 @@ $(function(){
     var img = message.image 
       ? ` <img src=${message.image} > `
       : "";
-    var html = `<div class="message-box" data-id="${message.id}" data-group="${message.group_id}">
+    var html = `<div class="message-box" data-id="${message.id}" >
                   <p class="message-box__user-name"> 
                     ${message.user_name}
                     <span>
@@ -45,14 +45,12 @@ $(function(){
   });
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    last_message_id = $('.message-box').data('id')
-    group_id = $('.message-box').data('group')
-    console.log(group_id)
+    last_message_id = $('.main-chat-space .message-box:last').data('id')
     $.ajax({
       url: 'api/messages',
       type: 'get',
       dataType: 'json',
-      data: {id: last_message_id, group_id: group_id}
+      data: {id: last_message_id}
     })
     .done(function(messages) {
       //追加するHTMLの入れ物を作る
