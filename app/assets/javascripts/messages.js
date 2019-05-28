@@ -3,7 +3,7 @@ $(function(){
     var img = message.image 
       ? ` <img src=${message.image} > `
       : "";
-    var html = `<div class="message-box" data-id="${message.id}">
+    var html = `<div class="message-box" data-id="${message.id}" data-group="${message.group_id}">
                   <p class="message-box__user-name"> 
                     ${message.user_name}
                     <span>
@@ -42,18 +42,17 @@ $(function(){
       $(".form-space__button").prop("disabled", false);
       alert('error');
     })
-  })
+  });
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    last_message_id = message.data('id')
+    last_message_id = $('.message-box').data('id')
+    group_id = $('.message-box').data('group')
+    console.log(group_id)
     $.ajax({
-      //ルーティングで設定した通りのURLを指定
-      url: '/api/messages',
-      //ルーティングで設定した通りhttpメソッドをgetに指定
+      url: 'api/messages',
       type: 'get',
       dataType: 'json',
-      //dataオプションでリクエストに値を含める
-      data: {id: last_message_id}
+      data: {id: last_message_id, group_id: group_id}
     })
     .done(function(messages) {
       //追加するHTMLの入れ物を作る
@@ -66,6 +65,7 @@ $(function(){
       var message_list = $('.main-chat-space');
       //メッセージを追加
       message_list.append(insertHTML)
+      $('.main-chat-space').scrollTop($('.main-chat-space')[0].scrollHeight); 
     })
     .fail(function() {
       console.log('error');
