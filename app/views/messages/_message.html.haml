@@ -1,4 +1,4 @@
-%div.message-box
+%div.message-box{data: {id: message.id}}
   %p.message-box__user-name  
     = message.user.name
     %span 
@@ -7,3 +7,4 @@
     %p.message-box__message 
       = message.content
   =image_tag message.image.url  if message.image.present?
+  
