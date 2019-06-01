@@ -14,6 +14,15 @@ $(function(){
       user_list.append(html);
   }
 
+  function noUser() {
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name">
+                    一致する人がいません
+                  </p>
+                </div>`
+      user_list.append(html);
+  }
+
   function appendMember(user_id, user_name) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id="chat-group-user-${user_id}">
                   <input name='group[user_ids][]' type='hidden' value="${user_id}">
@@ -24,11 +33,10 @@ $(function(){
                     削除
                   </div>
                 </div>`
-      member_list.append(html)
+      member_list.append(html);
   }
 
   $('#user-search-field').on('keyup', function(){
-    console.log(1)
     var user_name = $('#user-search-field').val()
     if (user_name.length !== 0){
       $.ajax({
@@ -43,7 +51,10 @@ $(function(){
           users.forEach(function(user){
             appendUser(user);
           });
-        }
+        }else{
+          noUser()
+          console.log(noUser)
+        };
       })
       .fail(function(){
         alert('error');
