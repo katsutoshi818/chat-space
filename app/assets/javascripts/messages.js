@@ -33,6 +33,7 @@ $(function(){
       var html = buildHTML(data);
       $('.main-chat-space').append(html)
       $('.form-space-message-area__message').val('')
+      $('#get-image').val('')
       $('.form-space__button').val('Send')
       $(".form-space__button").prop("disabled", false);
       $('.main-chat-space').scrollTop($('.main-chat-space')[0].scrollHeight); 
